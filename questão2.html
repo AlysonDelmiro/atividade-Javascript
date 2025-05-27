@@ -1,0 +1,11 @@
+<h2>Contador de Cliques</h2>
+<button onclick="contarCliques()">Clique aqui</button>
+<p id="contador">0</p>
+
+<script>
+let contador = 0;
+function contarCliques() {
+  contador++;
+  document.getElementById("contador").textContent = contador;
+}
+</script>
