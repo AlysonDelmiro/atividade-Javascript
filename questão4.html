@@ -1,0 +1,14 @@
+<h2>4.Validador de Senha</h2>
+<input type="password" id="senha" placeholder="Senha">
+<input type="password" id="confirmarSenha" placeholder="Confirmar senha">
+<button onclick="validarSenha()">Enviar</button>
+<p id="mensagemSenha"></p>
+
+<script>
+function validarSenha() {
+  const s1 = document.getElementById("senha").value;
+  const s2 = document.getElementById("confirmarSenha").value;
+  const msg = s1 === s2 ? "Senha correta" : "Senha incorreta";
+  document.getElementById("mensagemSenha").textContent = msg;
+}
+</script>
