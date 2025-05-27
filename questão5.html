@@ -1,0 +1,21 @@
+<h2>Jogo de Adivinhação</h2>
+<input type="number" id="palpite" placeholder="Digite um número de 1 a 10">
+<button onclick="verificarPalpite()">Tentar</button>
+<p id="mensagemJogo"></p>
+
+<script>
+const numeroSecreto = Math.floor(Math.random() * 10) + 1;
+let tentativas = 0;
+
+function verificarPalpite() {
+  tentativas++;
+  const palpite = parseInt(document.getElementById("palpite").value);
+  const msg = document.getElementById("mensagemJogo");
+
+  if (palpite === numeroSecreto) {
+    msg.textContent = `Você acertou em ${tentativas} tentativas`;
+  } else {
+    msg.textContent = `Tente novamente\nTentativas: ${tentativas}`;
+  }
+}
+</script>
